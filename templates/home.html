@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Homepage</title>
+    <link rel="stylesheet" href="/static/base.css">
+</head>
+<body>
+    <header>
+        <h1>CurrentWeather</h1>
+        <p>Find the current weather for any city in the world</p>
+    </header>
+    <form action="/" method="post">
+        <input type="text" class="text-box" name="city" placeholder="Search Your City Or Location">
+        <button type="submit" class="btn">SEARCH</button>
+</form>
+</div>
+<br>
+{% if city_name %}
+<div class="show-result">
+    <div class="output"><h3 style="color:black; font-size:35px; font-weight:bold; font-family:'Courier New', Courier, monospace; text-transform: uppercase;">{{city_name}}</h3></div>
+    <br>
+    <div class="output"><h3 style="color:green; font-size:22px; font-weight:bold;  font-family:'Courier New', Courier, monospace; ">WEATHER:</h3>{{condition}}</div>
+    {% if condition=='Rain' %}
+    <div class="output-logo">
+    <img src="{{url_for('static', filename='images/rain.png')}}">
+    </div>
+    {% endif %}
+    {% if condition=='Clear' %}
+    <div class="output-logo">
+    <img src="{{url_for('static', filename='images/clear.png')}}">
+    </div>
+    {% endif %}
+    {% if condition=='Clouds' %}
+    <div class="output-logo">
+    <img src="{{url_for('static', filename='images/clouds.png')}}">
+    </div>
+    {% endif %}
+    {% if condition=='Thunderstorm' %}
+    <div class="output-logo">
+    <img src="{{url_for('static', filename='images/thunderstorm.png')}}">
+    </div>
+    {% endif %}
+    {% if condition=='Haze' %}
+    <div class="output-logo">
+    <img src="{{url_for('static', filename='images/haze.png')}}">
+    </div>
+    {% endif %}
+    {% if condition=='Blizzard'%}
+    <div class="output-log">
+    <img src="{{url_for('static', filename='images/blizzard.png')}}">
+    </div>
+    {% endif %}
+    <div class="output-desc">{{desc}}</div>
+    <div class="output"><h3 style="color:green; font-size:22px; font-weight:bold;  font-family:'Courier New', Courier, monospace; ">TEMPERATURE:</h3>{{temperature}} °C</div>
+    <div class="output"><h3 style="color:green; font-size:22px; font-weight:bold;  font-family:'Courier New', Courier, monospace; ">HUMIDITY:</h3>{{humidity}} %</div>
+    <div class="output"><h3 style="color:green; font-size:22px; font-weight:bold;  font-family:'Courier New', Courier, monospace; ">PRESSURE:</h3>{{pressure}} mb</div>
+    <div class="output"><h3 style="color:green; font-size:22px; font-weight:bold;  font-family:'Courier New', Courier, monospace; ">Wind Speed:</h3>{{wind}} Km/h</div>
+</div>
+{% else %}
+<h3 style="color:red; padding:30px;font-size:35px; font-weight:bold; font-family:'Courier New', Courier, monospace; text-transform: uppercase;">Enter A City Name To Check Current Wheather Report</h3>
+{% endif %}
+
+<br>
+    <footer>
+    <div class="head"><p>&copy;TG Industries 2023</p></div>
+    </footer>
+
+</body>
+
+</html>
