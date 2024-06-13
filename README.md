@@ -12,7 +12,7 @@ Contact
 Acknowledgements
 Installation
 Clone the repository:
-git clone https://github.com/yourusername/WeatherApp.git
+git clone https://github.com/thegreatgabuza/WeatherApp.git
 cd WeatherApp
 Create a virtual environment and activate it:
 python -m venv venv
@@ -26,16 +26,28 @@ Run the Flask application:
 flask run
 Open your web browser and navigate to http://127.0.0.1:5000.
 Enter a location in the search box and click "Get Weather" to see the current weather information for that location.
-Project Structure
-WeatherApp/
-│
-├── templates/
-│   ├── home.html
-│
-├── app.py
-├── requirements.txt
-└── README.md
+
 How It Works
 Flask Application: The application is built using the Flask framework.
 OpenWeather API: The app fetches weather data from the OpenWeather API based on the user's input location.
 HTML Template: The weather information is displayed using an HTML template.
+
+Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+Fork the Project.
+Create your Feature Branch:
+git checkout -b feature/AmazingFeature
+Commit your Changes:
+git commit -m 'Add some AmazingFeature'
+Push to the Branch:
+git push origin feature/AmazingFeature
+Open a Pull Request.
+License
+Distributed under the MIT License. See LICENSE for more information.
+
+Acknowledgements
+Flask: For providing a simple and powerful web framework.
+OpenWeather: For offering a comprehensive weather API.
+Bootstrap: For providing a responsive design framework (if used).
+
