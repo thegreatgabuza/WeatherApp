@@ -1,4 +1,3 @@
-WeatherApp
 WeatherApp is a Flask web application that provides weather information for a given location using the OpenWeather API. This project demonstrates how to build a simple web application with Flask and integrate it with an external API to fetch and display data.
 
 Table of Contents
@@ -31,7 +30,7 @@ Project Structure
 WeatherApp/
 │
 ├── templates/
-│   ├── index.html
+│   ├── home.html
 │
 ├── app.py
 ├── requirements.txt
